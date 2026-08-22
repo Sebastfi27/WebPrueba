@@ -4,24 +4,17 @@ layout: gridlay
 sitemap: false
 permalink: /software/
 ---
-
 ## Software
 
 <div class="section-card">
-<h4>Path Integral Monte Carlo</h4>
-<div class="pub-actions" style="margin-bottom: var(--space-3);">
-<a href="https://example.com" target="_blank" class="btn-pill btn-website">Website</a>
-<a href="https://github.com" target="_blank" class="btn-pill btn-git">Git</a>
-</div>
-<p><strong>Authors:</strong> <em>R. P. Feynman, A. Hibbs</em></p>
-<p>A Monte Carlo simulation code for computing quantum mechanical path integrals in many-body systems. Used to study the lambda transition in liquid helium and other quantum statistical mechanics problems.</p>
-</div>
-
-<div class="section-card">
-<h4>QED Diagram Calculator</h4>
-<div class="pub-actions" style="margin-bottom: var(--space-3);">
-<a href="https://example.com" target="_blank" class="btn-pill btn-website">Website</a>
-</div>
-<p><strong>Authors:</strong> <em>R. P. Feynman</em></p>
-<p>A tool for systematically enumerating and evaluating Feynman diagrams in quantum electrodynamics calculations, automating the computation of scattering amplitudes to arbitrary order in perturbation theory.</p>
+<h3>DEEP ENHANCEMENT</h3>
+<p>A computational tool for deep learning-based enhancement and reconstruction of geophysical data, developed as part of research on seismic exploration and subsurface imaging.</p>
+<ul>
+<li><strong>Authors:</strong> <strong>Paul Goyes-Peñafiel</strong>, Efraín Andrés Laverde Mera, Javier Andrés Torres Quintero, José David Sanabria Gómez, Henry Arguello Fuentes, Francisco Alberto Velandia Patiño, Olga Cecilia Chacón Castaño</li>
+<li><strong>Platform:</strong> Linux, Windows</li>
+<li><strong>Environment:</strong> Python</li>
+<li><strong>Focus areas:</strong> Deep learning, geophysical exploration, seismic data reconstruction</li>
+<li><strong>Registration:</strong> Contract/Registry No. 13-106-176, Universidad Industrial de Santander (2025)</li>
+</ul>
+<!-- <p><a href="PENDIENTE_URL_REPOSITORIO" target="_blank">View repository</a></p> -->
 </div>
