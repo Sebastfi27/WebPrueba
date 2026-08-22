@@ -17,7 +17,7 @@ links:
   orcid: ""
   twitter: ""
   linkedin: ""
-  cv: ""  # e.g., "papers/cv.pdf" — leave blank to hide the CV icon
+  cv: "/cv/"  # e.g., "papers/cv.pdf" — leave blank to hide the CV icon
 
 # ============================================================
 # STEP 3: Site Settings
@@ -44,6 +44,7 @@ nav_pages:
   - name: team
   - name: teaching
   - name: blogs
+  - name: cv
 
 # ============================================================
 # Advanced Settings (you probably don't need to change these)
