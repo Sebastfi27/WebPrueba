@@ -5,74 +5,113 @@ sitemap: false
 permalink: /cv/
 ---
 
-## Curriculum Vitae
+<style>
+.cv-header { text-align: center; margin-bottom: 2rem; }
+.cv-header h2 { margin-bottom: 0.25rem; }
+.cv-header p { color: var(--text-secondary); font-style: italic; }
+.cv-print-btn { display: inline-block; margin-top: 1rem; background: var(--accent-color, #1a7a6d); color: white; border: none; padding: 8px 18px; border-radius: 6px; cursor: pointer; font-size: 0.9rem; text-decoration: none; }
+.cv-section-title { font-size: 1.3rem; font-weight: 700; margin: 2.5rem 0 1rem 0; border-bottom: 2px solid var(--accent-color, #1a7a6d); padding-bottom: 0.4rem; }
+.cv-timeline { border-left: 2px solid rgba(26,122,109,0.3); margin-left: 0.5rem; padding-left: 1.5rem; }
+.cv-entry { position: relative; margin-bottom: 1.6rem; }
+.cv-entry::before { content: ""; position: absolute; left: -1.85rem; top: 0.3rem; width: 10px; height: 10px; border-radius: 50%; background: var(--accent-color, #1a7a6d); }
+.cv-date { font-size: 0.85rem; color: var(--text-secondary); font-weight: 600; letter-spacing: 0.02em; }
+.cv-title { font-weight: 700; font-size: 1.05rem; margin: 0.15rem 0 0 0; }
+.cv-subtitle { font-style: italic; color: var(--text-secondary); margin: 0 0 0.4rem 0; font-size: 0.95rem; }
+.cv-desc { font-size: 0.95rem; line-height: 1.5; }
+.cv-desc ul { margin-top: 0.4rem; }
+</style>
 
-<div class="section-card">
-<div class="pi-card">
-<div>
-<h3 class="pi-name">{{ site.name }}</h3>
-<p style="font-style: italic; color: var(--text-secondary);">{{ site.title }}, {{ site.institution }}</p>
-<div class="pi-links">
-{% if site.email %}<a href="mailto:{{ site.email }}" class="icon-link" title="Email"><i class="fa-solid fa-envelope"></i></a>{% endif %}
-{% if site.links.google_scholar and site.links.google_scholar != "" %}<a href="{{ site.links.google_scholar }}" class="icon-link" title="Google Scholar"><i class="ai ai-google-scholar"></i></a>{% endif %}
-{% if site.links.orcid and site.links.orcid != "" %}<a href="{{ site.links.orcid }}" class="icon-link" title="ORCID"><i class="ai ai-orcid"></i></a>{% endif %}
-{% if site.links.linkedin and site.links.linkedin != "" %}<a href="{{ site.links.linkedin }}" class="icon-link" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>{% endif %}
-</div>
-</div>
-</div>
-</div>
-
-{% if site.data.pi[0].education %}
-<div class="section-card">
-<h3>Education</h3>
-<ul>
-{% for education in site.data.pi[0].education %}
-<li>{{ education | replace: "-","&#8211;" }}</li>
-{% endfor %}
-</ul>
-</div>
-{% endif %}
-
-{% if site.data.grants %}
-<div class="section-card">
-<h3>Research Projects</h3>
-<ul>
-{% for grant in site.data.grants %}
-<li>{{ grant.name }}</li>
-{% endfor %}
-</ul>
-</div>
-{% endif %}
-
-<div class="section-card">
-<h3>Publications</h3>
-{% bibliography %}
+<div class="cv-header">
+<h2>{{ site.name }}</h2>
+<p>{{ site.title }}, {{ site.institution }}</p>
+<a class="cv-print-btn" onclick="window.print()"><i class="fa-solid fa-print"></i> Print / Save as PDF</a>
 </div>
 
-{% if site.data.awards %}
-<div class="section-card">
-<h3>Awards and Distinctions</h3>
-<ul>
+<div class="cv-section-title">Professional Summary</div>
+<p>Geologist and geophysicist working at the intersection of inverse theory, compressive sensing, and deep learning applied to geophysical exploration. Currently completing a PhD in Computer Science at Universidad Industrial de Santander, with research focused on 3D survey geometry optimization and recovery algorithms for compressive seismic acquisition.</p>
+
+<div class="cv-section-title">Experience</div>
+<div class="cv-timeline">
+<div class="cv-entry">
+<div class="cv-date">Aug 2025 – Present</div>
+<div class="cv-title">Researcher & Lecturer</div>
+<div class="cv-subtitle">Universidad Industrial de Santander</div>
+<div class="cv-desc">Teaching "Fundamentos de Geofísica I" (graduate level). Co-investigator, Contract 045-2025 UIS-MINCIENCIAS on joint inversion of gravimetry, magnetometry, and magnetotelluric data for geothermal exploration at Cerro Machín volcano.</div>
+</div>
+<div class="cv-entry">
+<div class="cv-date">Jan 2024 – Aug 2025</div>
+<div class="cv-title">Co-investigator</div>
+<div class="cv-subtitle">Universidad Industrial de Santander — Project 3925</div>
+<div class="cv-desc">Improvement of seismic imaging in emerging Colombian basins.</div>
+</div>
+<div class="cv-entry">
+<div class="cv-date">Sep 2023 – Dec 2023</div>
+<div class="cv-title">Visiting Research Intern</div>
+<div class="cv-subtitle">Washington University in St. Louis — Computational Imaging Group</div>
+<div class="cv-desc">Research internship funded by UIS and Washington University in St. Louis. Advanced applications of deep learning in geophysical problems, focused on diffusion models for seismic data reconstruction.</div>
+</div>
+<div class="cv-entry">
+<div class="cv-date">Nov 2021 – Sep 2023</div>
+<div class="cv-title">Program Coordinator & Lecturer</div>
+<div class="cv-subtitle">Universidad Industrial de Santander</div>
+<div class="cv-desc">Coordinated talent development for MSc Geophysics research-internship students. Taught "Fundamentos de Geofísica II" and "Introducción a la Sismología." Co-investigator, Project 9836 (MINCIENCIAS & ANH) on 3D seismic acquisition geometry design.</div>
+</div>
+<div class="cv-entry">
+<div class="cv-date">Jun 2019 – Sep 2021</div>
+<div class="cv-title">Research Professional</div>
+<div class="cv-subtitle">Universidad Industrial de Santander</div>
+<div class="cv-desc">Deep learning applied to seismic data design and processing in frontier basins.</div>
+</div>
+<div class="cv-entry">
+<div class="cv-date">Oct 2018 – May 2019</div>
+<div class="cv-title">Director, R&D Unit</div>
+<div class="cv-subtitle">INGEOSUR SAS</div>
+<div class="cv-desc">Founded and directed the Computational Geosciences R&D Unit. Designed AI-based methodologies for geophysics and environmental geology.</div>
+</div>
+</div>
+
+<div class="cv-section-title">Education</div>
+<div class="cv-timeline">
+<div class="cv-entry">
+<div class="cv-date">2019 – Present</div>
+<div class="cv-title">Ph.D. Computer Science</div>
+<div class="cv-subtitle">Universidad Industrial de Santander</div>
+<div class="cv-desc">Optimization of 3D Survey Geometry and Recovery Algorithm in Compressive Seismic Acquisition.</div>
+</div>
+<div class="cv-entry">
+<div class="cv-date">2016 – 2018</div>
+<div class="cv-title">M.Sc. Geology/Geophysics</div>
+<div class="cv-subtitle">Perm State University, Russia</div>
+<div class="cv-desc">Pre-stack seismic migration applied to karst cave detection in the Ural region.</div>
+</div>
+<div class="cv-entry">
+<div class="cv-date">2015 – 2016</div>
+<div class="cv-title">Specialization, Environmental Geotechnics</div>
+<div class="cv-subtitle">Universidad de Santander</div>
+</div>
+<div class="cv-entry">
+<div class="cv-date">2009 – 2014</div>
+<div class="cv-title">B.S. Geology</div>
+<div class="cv-subtitle">Universidad Industrial de Santander</div>
+<div class="cv-desc">Study of dynamic topography effects on the Nazca Plate.</div>
+</div>
+</div>
+
+<div class="cv-section-title">Awards & Distinctions</div>
+<div class="cv-timeline">
 {% for award in site.data.awards %}
-<li>{{ award.name | replace: "-","&#8211;" }}</li>
-{% endfor %}
-</ul>
+<div class="cv-entry">
+<div class="cv-title">{{ award.name | replace: "-","&#8211;" }}</div>
 </div>
-{% endif %}
-
-{% if site.data.people %}
-<div class="section-card">
-<h3>Students Directed (as Principal Advisor)</h3>
-<ul>
-{% for student in site.data.people %}
-<li>{{ student.name }}, {{ student.location }} ({{ student.degree }}, {{ student.year }})</li>
 {% endfor %}
-</ul>
 </div>
-{% endif %}
 
-<div class="section-card" markdown="0">
-<button onclick="window.print()" style="background: var(--accent-color, #1a7a6d); color: white; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer; font-size: 0.95rem;">
-<i class="fa-solid fa-print"></i> Print / Save as PDF
-</button>
+<div class="cv-section-title">Research Interests</div>
+<p>Inverse Theory & Applications in Geophysics · Artificial Intelligence · Environmental Geology · Applied and Computational Geophysics</p>
+
+<div class="cv-section-title">Languages</div>
+<p><strong>Spanish:</strong> Native · <strong>English:</strong> Professional working proficiency · <strong>Russian:</strong> Professional working proficiency</p>
+
+<div class="cv-section-title">Selected Publications</div>
+{% bibliography %}
 </div>
